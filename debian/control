@@ -1,0 +1,36 @@
+Source: libcommons-cli-java
+Section: java
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Ludovic Claude <ludovic.claude@laposte.net>,
+ tony mancill <tmancill@debian.org>,
+ Emmanuel Bourg <ebourg@apache.org>
+Build-Depends: debhelper (>= 9),
+ cdbs (>= 0.4.8),
+ default-jdk,
+ ant,
+ ant-optional,
+ maven-ant-helper, maven-repo-helper,
+ libcommons-lang-java (>= 2.0),
+ junit4
+Standards-Version: 3.9.6
+Vcs-Git: git://anonscm.debian.org/pkg-java/libcommons-cli-java.git
+Vcs-Browser: http://anonscm.debian.org/cgit/pkg-java/libcommons-cli-java.git
+Homepage: http://commons.apache.org/cli/
+
+Package: libcommons-cli-java
+Architecture: all
+Depends: ${misc:Depends}
+Description: Command line arguments and options parsing library
+ The Apache Commons CLI library provides an API for parsing command line options
+ passed to programs. It's also able to print help messages detailing the options
+ available for a command line tool.
+ .
+ Commons CLI supports different types of options:
+ .
+  * POSIX like options (ie. tar -zxvf foo.tar.gz)
+  *  GNU like long options (ie. du --human-readable --max-depth=1)
+  *  Java like properties (ie. java -Djava.awt.headless=true Foo)
+  *  Short options with value attached (ie. gcc -O2 foo.c)
+  *  long options with single hyphen (ie. ant -projecthelp)
